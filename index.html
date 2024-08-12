@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <title>Prevent Default JavaScript</title>
+
+    <link rel="stylesheet" href="common.css" />
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body>
+    <main>
+      <div class="wrapper">
+        <form>
+          <div class="form-group">
+            <label for="name">Nama</label>
+            <input type="text" name="name" id="name" required />
+          </div>
+          <div class="form-group">
+            <input
+              type="checkbox"
+              name="isMarried"
+              id="isMarried"
+              data-controls="additionalForm"
+            />
+            <label for="isMarried">Sudah berkeluarga?</label>
+          </div>
+
+          <fieldset class="additional-form-group" id="additionalForm">
+            <legend>Data Keluarga</legend>
+            <div class="form-group">
+              <label for="wifeName">Apa nama istri Anda?</label>
+              <input type="text" id="wifeName" name="wifeName" />
+            </div>
+            <div class="form-group">
+              <label for="childCount">Berapa orang anak?</label>
+              <input type="number" id="childCount" name="childCount" />
+            </div>
+          </fieldset>
+
+          <div class="form-group">
+            <button class="btn">Kirim</button>
+          </div>
+        </form>
+      </div>
+    </main>
+
+    <script src="main.js"></script>
+  </body>
+</html>
